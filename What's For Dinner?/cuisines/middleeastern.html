@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>What's For Dinner?</title>
+        <link href="../style.css" rel="stylesheet">
+    </head>
+</html>
+<body class="middleeastern", data-cuisine="middleEastern">
+    
+    <img src="../images/middleeasternfoods.png", class="middleeasternfoods-image" alt="Middle-Eastern-Foods">
+    <p>
+        Are there any dishes that catch your eye? <br>If not, click the shuffle button for more options!
+    </p>
+
+    <div id="food-options" class="food-options">
+       <!--    food options will show up here     --> 
+    </div>
+
+    <div class="center-button">
+        <button onclick="shuffleFoods()" class="button">Shuffle</button>
+    </div>
+
+    <dialog id="food-dialog">
+        <div class="wrapper">
+            <h2 id="food-name"></h2>
+            <img id="food-image" src="" alt="" style="width: 200px;">
+            <p id="food-tags"></p>
+            <div class="recipe">
+                <a id="food-recipe" href="" target="_blank">View Recipe</a>
+            </div>
+            <div class="control-button">
+                <button onclick="closeDialog()">Back</button>
+                <button id="lets-eat-button" type="button">Let's Eat!</button>
+            </div>
+        </div>
+    </dialog>
+
+    <script src="../script.js"></script>
+
+    <div class = "center-button"> 
+        <a href="../index.html" class="button">Back</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script>
+        // FADE IN on load
+        document.addEventListener("DOMContentLoaded", () => {
+          document.body.classList.add("fade-in");
+      
+          // FADE OUT on link click
+          const anchors = document.querySelectorAll("a");
+          for (const anchor of anchors) {
+            const href = anchor.getAttribute("href");
+      
+            if (href && !href.startsWith("http") && !anchor.target) {
+              anchor.addEventListener("click", function (e) {
+                e.preventDefault();
+                document.body.classList.remove("fade-in");
+                document.body.style.opacity = "0";
+      
+                setTimeout(() => {
+                  window.location.href = href;
+                }, 500); // match transition time
+              });
+            }
+          }
+        });
+      </script>
+
+</body>

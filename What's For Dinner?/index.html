@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>What's For Dinner?</title>
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <meta name="view-transition" content="same-origin">
+
+
+    <body class="home-page">
+        <div class = "sign">
+            
+            <img src="images/WFD_Title.png" class="title-image" alt="Title">
+            <p>What kind of cuisine are we feeling for dinner? <br> Select of one the options below:</p>
+            
+            <div class="cuisine-options">
+                <a href="cuisines/asian.html" class="button">Asian</a>
+                <a href="cuisines/western.html" class="button">Western</a>
+                <a href="cuisines/latinamerican.html" class="button">Latin American</a>
+                <a href="cuisines/middleeastern.html" class="button">Middle Eastern</a>
+                
+            </div>
+        </div>
+
+        <script>
+            // FADE IN on load
+            document.addEventListener("DOMContentLoaded", () => {
+              document.body.classList.add("fade-in");
+          
+              // FADE OUT on link click
+              const anchors = document.querySelectorAll("a");
+              for (const anchor of anchors) {
+                const href = anchor.getAttribute("href");
+          
+                if (href && !href.startsWith("http") && !anchor.target) {
+                  anchor.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    document.body.classList.remove("fade-in");
+                    document.body.style.opacity = "0";
+          
+                    setTimeout(() => {
+                      window.location.href = href;
+                    }, 500); // match transition time
+                  });
+                }
+              }
+            });
+          </script>
+                  
+
+    </body>
+    <script src="../script.js"></script>
+</html>

@@ -1,0 +1,233 @@
+@font-face {
+    font-family: "Minecraftia";
+    src: url("fonts/Minecraftia-Regular.ttf");
+}
+
+* {
+    cursor: url("cursor.cur"), auto;
+}
+
+.cursor {
+    width: 20px;
+    height: 20px;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+    animation:alternate;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+body.home-page {
+    background-image: url("images/bground.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+body.asian {
+    background-image: url("images/bground.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+body.latin {
+    background-image: url("images/bground.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+body.western {
+    background-image: url("images/bground.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+body.middleeastern {
+    background-image: url("images/bground.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+body {
+    font-family: "Minecraftia";
+    align-items: center; 
+    transition: opacity 0.5s ease-in;
+
+}
+
+body.fade-in {
+    opacity: 1;
+}
+
+a {
+    color: rgb(164, 91, 39);
+    text-decoration: none;
+    
+    transition: transform 0.2s ease;
+}
+
+a:hover {
+    transform: scale(1.05);
+    color: rgb(129, 91, 52);
+}
+
+h1 {
+    text-align: center;
+    
+}
+h2 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+.cuisine-options {
+    display: flex;            /* make children align horizontally */
+    flex-direction: row;      /* default, but good to be explicit */
+    justify-content: center;  /* center the buttons horizontally */
+    align-items: center;      /* center vertically */
+    gap: 25px;  
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;  
+
+    text-align: center;
+    margin-right: 80%;
+    width: 100%;
+    height: 100px;
+    max-width: 100%;
+    padding: 0px;
+}
+
+.cuisine-options a:hover {
+    background-color: rgba(159, 132, 81, 0.256);
+}
+
+button {
+    background-image: url("images/bbackground.png");
+    background-size: cover;
+    background-color: transparent;        
+    border-color: #543e3e;
+    border-width: 0.25cap;
+    border-radius: 0px;                
+    padding: 10px 10px;
+    margin: 5px;
+    font-family: "Minecraftia";
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    transition: all 0.2s ease;
+}
+button:hover {
+    background-color: transparent;         
+    transform: scale(1.05);             
+}
+
+.center-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#food-options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.title-image {
+    display: block;
+    margin-left: auto;
+    margin-right: 34.5%;
+    width: 29%; 
+}
+
+.asianfoods-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6%;
+    width: 20%; 
+}
+
+.westernfoods-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6%;
+    width: 20%; 
+}
+
+.latinamericanfoods-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6%;
+    width: 20%; 
+}
+
+.middleeasternfoods-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6%;
+    width: 20%; 
+}
+
+
+.recipe {
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+.recipe a:hover {
+    background-color: bisque;
+}
+
+.control-button {
+    text-align: center;
+}
+
+dialog {
+    text-align: center;
+    padding: 20px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#food-image {
+    display: block;
+    margin: 0 auto;
+    width: 200px;  /* or whatever size looks good */
+    height: auto;
+}
+
+/* Smooth fade for page transitions */
+body {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  body.fade-in {
+    opacity: 1;
+  }
+  
